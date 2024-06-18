@@ -1,8 +1,11 @@
 #!/usr/bin/bash 
-python -u run.py --train \
+
+export TQDM_DISABLE=1
+
+python -u with_optuna.py \
     --optim adam \
     --eval_freq 100 \
-    --check_point 6400 \
+    --check_point 20000 \
     --dataset VK \
     --combine exp_mul \
     --gnn_neigh_sample 0 \
@@ -11,11 +14,6 @@ python -u run.py --train \
     --learning_rate 0.001 \
     --lr_decay 0.5 \
     --weight_decay 1e-5 \
-    --dropout_rate 0.45 \
-    --num_steps 6400 \
-    --embed_size 128 \
-    --hidden_size 32 \
-    --batch_size 128 \
     --patience 6 \
     --model_dir /mnt/home/victor/MODELS/GraphCM/models/ \
     --result_dir ./GraphCM/results/ \
