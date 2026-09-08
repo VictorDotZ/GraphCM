@@ -113,7 +113,7 @@ def parse_args():
         help="the number of multi-head attention for GAT",
     )
     model_settings.add_argument(
-        "--gnn_dropout", type=int, default=0, help="the dropout for the gat layer"
+        "--gnn_dropout", type=float, default=0, help="the dropout for the gat layer"
     )
     model_settings.add_argument(
         "--gnn_leaky_slope",

@@ -15,7 +15,7 @@ python -u with_optuna.py \
     --lr_decay 0.5 \
     --weight_decay 1e-5 \
     --patience 6 \
-    --model_dir /mnt/home/victor/MODELS/GraphCM/models/ \
+    --model_dir ./GraphCM/models/ \
     --result_dir ./GraphCM/results/ \
     --summary_dir ./GraphCM/summary/ \
     --log_dir ./GraphCM/log/

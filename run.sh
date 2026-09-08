@@ -1,12 +1,14 @@
 #!/usr/bin/bash 
 python -u run.py --train \
     --optim adam \
-    --eval_freq 100 \
+    --eval_freq 10 \
     --check_point 6400 \
     --dataset VK \
     --combine exp_mul \
-    --gnn_neigh_sample 0 \
+    --use_gnn \
+    --gnn_neigh_sample 5 \
     --gnn_concat False \
+    --gnn_dropout 0.5 \
     --inter_neigh_sample 0 \
     --learning_rate 0.001 \
     --lr_decay 0.5 \
@@ -16,8 +18,8 @@ python -u run.py --train \
     --embed_size 128 \
     --hidden_size 32 \
     --batch_size 128 \
-    --patience 6 \
-    --model_dir /mnt/home/victor/MODELS/GraphCM/models/ \
+    --patience 2 \
+    --model_dir ./GraphCM/models/ \
     --result_dir ./GraphCM/results/ \
     --summary_dir ./GraphCM/summary/ \
     --log_dir ./GraphCM/log/

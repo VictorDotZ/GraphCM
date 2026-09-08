@@ -33,7 +33,7 @@ class Model(object):
         self.max_d_num = args.max_d_num
         self.writer = None
         if args.train:
-            self.writer = SummaryWriter(self.args.summary_dir)
+            self.writer = SummaryWriter(self.args.summary_dir, flush_secs=10)
 
         # GraphCM
         self.model = GraphCM(args, query_size, doc_size, vtype_size, dataset)

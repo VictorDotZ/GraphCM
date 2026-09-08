@@ -133,8 +133,14 @@ def generate_train_valid_test(args):
     sessions = {}
     file_types = ["train", "valid", "test"]
     sessions["train"] = infos_per_session[:train_valid_split]
+    print(
+        f"infos_per_session[:train_valid_split] where train_valid_split = {train_valid_split}"
+    )
     sessions["valid"] = infos_per_session[train_valid_split:valid_test_split]
     sessions["test"] = infos_per_session[valid_test_split:]
+    print(
+        f"infos_per_session[valid_test_split:] where valid_test_split = {valid_test_split}"
+    )
     assert train_session_num == len(
         sessions["train"]
     ), "train_session_num: {}, len(train_sessions): {}".format(
@@ -189,6 +195,7 @@ def generate_train_valid_test(args):
     print("  - {}".format("Save rebuilt query_qid/url_uid back to files..."))
     save_dict(args.output, "query_qid.dict", query_qid)
     save_dict(args.output, "url_uid.dict", url_uid)
+    save_dict(args.output, "vtype_vid.dict", {"": 0, "1": 1})
 
 
 def construct_dgat_graph(args):
@@ -201,9 +208,10 @@ def construct_dgat_graph(args):
     # set_names = ['demo']
     set_names = ["train", "valid", "test"]
     qid_edges, uid_edges = set(), set()
-    qid_neighbors, uid_neighbors = {qid: set() for qid in range(len(query_qid))}, {
-        uid: set() for uid in range(len(url_uid))
-    }
+    qid_neighbors, uid_neighbors = (
+        {qid: set() for qid in range(len(query_qid))},
+        {uid: set() for uid in range(len(url_uid))},
+    )
     for set_name in set_names:
         print("  - {}".format("Constructing relations in {} set".format(set_name)))
         lines = open(
@@ -291,9 +299,10 @@ def construct_dgat_graph(args):
     torch.save(uid_edge_index, os.path.join(args.output, "dgat_uid_edge_index.pth"))
 
     # Count degrees of qid/uid nodes
-    qid_degrees, uid_degrees = [set([i]) for i in range(len(query_qid))], [
-        set([i]) for i in range(len(url_uid))
-    ]
+    qid_degrees, uid_degrees = (
+        [set([i]) for i in range(len(query_qid))],
+        [set([i]) for i in range(len(url_uid))],
+    )
     for qid_edge in qid_edges:
         qid_degrees[qid_edge[0]].add(qid_edge[1])
         qid_degrees[qid_edge[1]].add(qid_edge[0])
