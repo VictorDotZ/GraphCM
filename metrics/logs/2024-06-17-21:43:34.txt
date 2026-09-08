@@ -1,0 +1,9 @@
+2024-06-17 21:43:34,638 - Running with args : Namespace(train=True, valid=False, test=False, rank=False, num_iter=1, optim='adam', learning_rate=0.001, weight_decay=1e-05, momentum=0.99, dropout_rate=0.45, batch_size=128, num_steps=6400, reg_relevance=1.0, algo='GraphCM', combine='exp_mul', embed_size=128, pos_embed_size=4, click_embed_size=4, vtype_embed_size=8, hidden_size=32, max_d_num=10, use_pretrain_embed=False, use_gnn=False, gnn_neigh_sample=0, gnn_att_heads=2, gnn_dropout=0, gnn_leaky_slope=0.2, gnn_concat=True, inter_neigh_sample=0, inter_leaky_slope=0.2, dataset='VK', model_dir='./GraphCM/models/', result_dir='./GraphCM/results/', summary_dir='./GraphCM/summary/', log_dir='./GraphCM/log/', eval_freq=100, check_point=6400, patience=6, lr_decay=0.5, load_model=-1, data_parallel=False, gpu_num=1)
+2024-06-17 21:43:34,646 - Checking the directories...
+2024-06-17 21:43:34,646 - Loading train/valid/test/label/graph data...
+2024-06-17 21:43:39,785 - Train set size: 340760 sessions.
+2024-06-17 21:43:39,785 - Dev set size: 42595 sessions.
+2024-06-17 21:43:39,785 - Test set size: 42596 sessions.
+2024-06-17 21:43:39,785 - Unique query num, including zero vector: 165250
+2024-06-17 21:43:39,785 - Unique doc num, including zero vector: 1015096
+2024-06-17 21:43:39,785 - Unique vtype num, including zero vector: 2

@@ -1,0 +1,55 @@
+2024-06-16 20:56:02,135 - Running with args : Namespace(train=True, valid=False, test=False, rank=False, num_iter=1, optim='adam', learning_rate=0.001, weight_decay=1e-05, momentum=0.99, dropout_rate=0.5, batch_size=256, num_steps=20000, reg_relevance=1.0, algo='GraphCM', combine='exp_mul', embed_size=64, pos_embed_size=4, click_embed_size=4, vtype_embed_size=8, hidden_size=64, max_d_num=10, use_pretrain_embed=False, use_gnn=False, gnn_neigh_sample=0, gnn_att_heads=2, gnn_dropout=0, gnn_leaky_slope=0.2, gnn_concat=True, inter_neigh_sample=0, inter_leaky_slope=0.2, dataset='VK', model_dir='./GraphCM/models/', result_dir='./GraphCM/results/', summary_dir='./GraphCM/summary/', log_dir='./GraphCM/log/', eval_freq=100, check_point=100, patience=6, lr_decay=0.5, load_model=-1, data_parallel=False, gpu_num=1)
+2024-06-16 20:56:02,135 - Checking the directories...
+2024-06-16 20:56:02,135 - Loading train/valid/test/label/graph data...
+2024-06-16 20:56:07,320 - Train set size: 340760 sessions.
+2024-06-16 20:56:07,320 - Dev set size: 42595 sessions.
+2024-06-16 20:56:07,320 - Test set size: 42596 sessions.
+2024-06-16 20:56:07,320 - Unique query num, including zero vector: 165250
+2024-06-16 20:56:07,320 - Unique doc num, including zero vector: 1015096
+2024-06-16 20:56:07,320 - Unique vtype num, including zero vector: 2
+2024-06-16 20:56:07,320 - Initialize the model...
+2024-06-16 20:56:07,724 - model.global_step: 0
+2024-06-16 20:56:07,724 - Training the model...
+2024-06-16 20:56:12,729 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 100.
+2024-06-16 20:56:17,353 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 200.
+2024-06-16 20:56:21,981 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 300.
+2024-06-16 20:56:26,614 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 400.
+2024-06-16 20:56:31,310 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 500.
+2024-06-16 20:56:35,926 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 600.
+2024-06-16 20:56:40,637 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 700.
+2024-06-16 20:56:45,195 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 800.
+2024-06-16 20:56:50,042 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 900.
+2024-06-16 20:56:54,789 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1000.
+2024-06-16 20:56:59,430 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1100.
+2024-06-16 20:57:04,067 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1200.
+2024-06-16 20:57:08,692 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1300.
+2024-06-16 20:57:29,222 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1400.
+2024-06-16 20:57:33,723 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1500.
+2024-06-16 20:57:38,376 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1600.
+2024-06-16 20:57:43,049 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1700.
+2024-06-16 20:57:47,796 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1800.
+2024-06-16 20:57:52,505 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 1900.
+2024-06-16 20:57:57,160 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2000.
+2024-06-16 20:58:02,032 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2100.
+2024-06-16 20:58:06,891 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2200.
+2024-06-16 20:58:11,707 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2300.
+2024-06-16 20:58:19,056 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2400.
+2024-06-16 20:58:27,245 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2500.
+2024-06-16 20:58:37,569 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2600.
+2024-06-16 20:58:50,601 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2700.
+2024-06-16 20:59:06,927 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2800.
+2024-06-16 20:59:21,785 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 2900.
+2024-06-16 20:59:35,309 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3000.
+2024-06-16 20:59:53,166 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3100.
+2024-06-16 21:00:11,908 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3200.
+2024-06-16 21:00:30,155 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3300.
+2024-06-16 21:00:49,557 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3400.
+2024-06-16 21:01:09,088 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3500.
+2024-06-16 21:01:33,772 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3600.
+2024-06-16 21:01:57,552 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3700.
+2024-06-16 21:02:26,470 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3800.
+2024-06-16 21:02:50,224 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 3900.
+2024-06-16 21:03:20,476 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 4000.
+2024-06-16 21:03:52,799 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 4100.
+2024-06-16 21:04:21,441 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 4200.
+2024-06-16 21:04:52,940 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 4300.

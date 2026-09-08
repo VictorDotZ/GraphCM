@@ -1,0 +1,15 @@
+2025-02-26 00:21:27,302 - Running with args : Namespace(train=True, valid=False, test=False, rank=False, num_iter=1, optim='adam', learning_rate=0.001, weight_decay=1e-05, momentum=0.99, dropout_rate=0.45, batch_size=128, num_steps=6400, reg_relevance=1.0, algo='GraphCM', combine='exp_mul', embed_size=128, pos_embed_size=4, click_embed_size=4, vtype_embed_size=8, hidden_size=32, max_d_num=10, use_pretrain_embed=False, use_gnn=True, gnn_neigh_sample=10, gnn_att_heads=2, gnn_dropout=0, gnn_leaky_slope=0.2, gnn_concat=True, inter_neigh_sample=0, inter_leaky_slope=0.2, dataset='VK', model_dir='./GraphCM/models/', result_dir='./GraphCM/results/', summary_dir='./GraphCM/summary/', log_dir='./GraphCM/log/', eval_freq=10, check_point=6400, patience=6, lr_decay=0.5, load_model=-1, data_parallel=False, gpu_num=1)
+2025-02-26 00:21:27,302 - Checking the directories...
+2025-02-26 00:21:27,302 - Loading train/valid/test/label/graph data...
+2025-02-26 00:21:32,672 - Train set size: 340760 sessions.
+2025-02-26 00:21:32,672 - Dev set size: 42595 sessions.
+2025-02-26 00:21:32,672 - Test set size: 42596 sessions.
+2025-02-26 00:21:32,672 - Unique query num, including zero vector: 165250
+2025-02-26 00:21:32,672 - Unique doc num, including zero vector: 1015096
+2025-02-26 00:21:32,672 - Unique vtype num, including zero vector: 2
+2025-02-26 00:21:32,672 - Initialize the model...
+2025-02-26 00:21:33,461 - model.global_step: 0
+2025-02-26 00:21:33,461 - Training the model...
+2025-02-26 05:35:57,420 - Model and optimizer saved in ./GraphCM/models/, with prefix GraphCM and global step 6400.
+2025-02-26 06:53:49,999 - Done with model training!
+2025-02-26 06:53:49,999 - run done.
